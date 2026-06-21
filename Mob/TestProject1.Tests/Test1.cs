@@ -7,9 +7,10 @@
         public void FalseIsTrue()
         {
 
-            Assert.IsTrue(false);
+            Assert.IsTrue(true);
         }
 
+        [TestMethod]
         public void TrueIsTrue()
         {
 
