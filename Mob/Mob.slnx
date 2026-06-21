@@ -1,4 +1,3 @@
 <Solution>
   <Project Path="Mob/Mob.Tests.csproj" />
-  <Project Path="TestProject1.Tests/TestProject1.Tests.csproj" Id="4e6dcaca-c219-410e-b323-3c779924a9d1" />
 </Solution>
