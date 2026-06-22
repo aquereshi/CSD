@@ -6,14 +6,28 @@
         [TestMethod]
         public void TestMethod1()
         {
-            //Arrange = Pre Condition
+            //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
 
-            //Act = Steps
-            int Number = numberGenerator.Generate();
+            //Act
+            int number = numberGenerator.Generate();
 
-            //Assert = Post Conditions
-            Assert.IsTrue(Number %  2 == 0);
+            //Assert
+            Assert.IsTrue(number %  2 == 0);
         }
+
+        [TestMethod]
+        public void IsNumberEndwithTwo()
+        {
+            //Arrange
+            NumberGenerator numberGenerator = new NumberGenerator();
+
+            //Act
+            int number = numberGenerator.Generate();
+
+            //Assert
+            Assert.IsTrue(number % 10 == 2);
+        }
+
     }
 }

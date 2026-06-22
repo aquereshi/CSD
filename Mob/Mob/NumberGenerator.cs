@@ -5,7 +5,7 @@
         internal int Generate()
         {
 
-            return 8;
+            return 2;
         }
     }
 }
