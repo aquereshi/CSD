@@ -13,7 +13,7 @@
             int number = numberGenerator.Generate();
 
             //Assert
-            Assert.IsTrue(number %  2 == 0);
+            Assert.AreEqual(0, number % 2);
         }
 
         [TestMethod]
@@ -26,7 +26,7 @@
             int number = numberGenerator.Generate();
 
             //Assert
-            Assert.IsTrue(number % 10 == 2);
+            Assert.AreEqual(2, number % 10);
         }
 
 
@@ -40,7 +40,7 @@
             int number = numberGenerator.Generate();
 
             //Assert
-            Assert.IsTrue(number > 9);
+            Assert.IsGreaterThan(9, number);
         }
 
 
@@ -54,7 +54,7 @@
             int number = numberGenerator.Generate();
 
             //Assert
-            Assert.IsTrue(number < 100);
+            Assert.IsLessThan(100, number);
         }
 
         [TestMethod]
@@ -67,9 +67,7 @@
             int number = numberGenerator.Generate();
 
             //Assert
-            Assert.IsTrue((number % 10) + (number / 10) == 6);
+            Assert.AreEqual(6, (number % 10) + (number / 10));
         }
-
-
     }
 }
