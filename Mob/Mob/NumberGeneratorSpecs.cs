@@ -1,10 +1,10 @@
 ﻿namespace Mob
 {
     [TestClass]
-    public sealed class NumberGenerationSpecs
+    public sealed class NumberGeneratorSpecs
     {
         [TestMethod]
-        public void isEvenNumber()
+        public void EvenNumber()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
@@ -17,7 +17,7 @@
         }
 
         [TestMethod]
-        public void IsNumberEndwithTwo()
+        public void EndwithTwo()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
@@ -31,7 +31,7 @@
 
 
         [TestMethod]
-        public void isNumberGreaterThanNine()
+        public void GreaterThan9()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
@@ -45,7 +45,7 @@
 
 
         [TestMethod]
-        public void isNumberLessThanOneHundred()
+        public void LessThan100()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
@@ -56,6 +56,20 @@
             //Assert
             Assert.IsTrue(number < 100);
         }
+
+        [TestMethod]
+        public void SumOfBothDigitsEqualSix()
+        {
+            //Arrange
+            NumberGenerator numberGenerator = new NumberGenerator();
+
+            //Act
+            int number = numberGenerator.Generate();
+
+            //Assert
+            Assert.IsTrue((number % 10) + (number / 10) == 6);
+        }
+
 
     }
 }
