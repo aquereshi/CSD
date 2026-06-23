@@ -1,7 +1,7 @@
 ﻿namespace Mob
 {
     [TestClass]
-    public sealed class Test1
+    public sealed class NumberGenerationSpecs
     {
         [TestMethod]
         public void isEvenNumber()
@@ -41,6 +41,20 @@
 
             //Assert
             Assert.IsTrue(number > 9);
+        }
+
+
+        [TestMethod]
+        public void isNumberLessThanOneHundred()
+        {
+            //Arrange
+            NumberGenerator numberGenerator = new NumberGenerator();
+
+            //Act
+            int number = numberGenerator.Generate();
+
+            //Assert
+            Assert.IsTrue(number < 100);
         }
 
     }
