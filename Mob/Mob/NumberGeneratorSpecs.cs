@@ -4,7 +4,7 @@
     public sealed class NumberGeneratorSpecs
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestNumberIsEven()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
@@ -14,10 +14,25 @@
             int number = numberGenerator.Generate();
 
             //Assert
-            Assert.IsTrue(number % 2==0);
-           
+            Assert.IsTrue(number % 2==0);           
         }
 
-     
+        [TestMethod]
+        public void TestNumberEndwihtTwo()
+        {
+            //Arrange
+            NumberGenerator numberGenerator = new NumberGenerator();
+
+
+            //Act
+            int number = numberGenerator.Generate();
+            bool endingWithTwo = number.ToString().EndsWith('2');
+
+            //Assert
+            Assert.IsTrue(endingWithTwo);
+            
+        }
+
+
     }
 }
