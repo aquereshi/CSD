@@ -4,11 +4,10 @@
     public sealed class NumberGeneratorSpecs
     {
         [TestMethod]
-        public void TestNumberIsEven()
+        public void IsEven()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
-
 
             //Act
             int number = numberGenerator.Generate();
@@ -18,11 +17,10 @@
         }
 
         [TestMethod]
-        public void TestNumberEndwihtTwo()
+        public void EndWith2()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
-
 
             //Act
             int number = numberGenerator.Generate();
@@ -30,37 +28,47 @@
 
             //Assert
             Assert.IsTrue(endingWithTwo);
-            
         }
 
         [TestMethod]
-        public void TestBigNumber()
+        public void GreaterThan9()
         {
             //Arrange
             NumberGenerator numberGenerator = new NumberGenerator();
 
-
             //Act
             int number = numberGenerator.Generate();
             
-
             //Assert
             Assert.IsTrue(number > 9);
 
         }
 
         [TestMethod]
-        public void TestNumberLessthan100()
+        public void LessThan100()
         {
             //Arrange
+            NumberGenerator numberGenerator = new NumberGenerator();
 
             //Act
-            int number = new NumberGenerator().Generate();
-
+            int number = numberGenerator.Generate();
 
             //Assert
             Assert.IsTrue(number < 100);
+        }
 
+        [TestMethod]
+        public void SumOfBothDigitsIsSix()
+        {
+            //Arrange
+            int number = new NumberGenerator().Generate();
+
+            //Act
+            int firstDigit = number / 10;
+            int secondDigit = number % 10;
+
+            //Assert
+            Assert.IsTrue( firstDigit + secondDigit == 6);
         }
 
 

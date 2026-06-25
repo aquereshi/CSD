@@ -4,8 +4,7 @@
     {
         internal int Generate()
         {
-            int number = 12;
-            return number;            
+            return 42;            
         }
     }
 }
