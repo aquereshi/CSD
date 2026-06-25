@@ -49,6 +49,20 @@
 
         }
 
+        [TestMethod]
+        public void TestNumberLessthan100()
+        {
+            //Arrange
+
+            //Act
+            int number = new NumberGenerator().Generate();
+
+
+            //Assert
+            Assert.IsTrue(number < 100);
+
+        }
+
 
     }
 }
