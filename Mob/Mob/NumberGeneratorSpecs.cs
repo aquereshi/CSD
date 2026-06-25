@@ -33,6 +33,22 @@
             
         }
 
+        [TestMethod]
+        public void TestBigNumber()
+        {
+            //Arrange
+            NumberGenerator numberGenerator = new NumberGenerator();
+
+
+            //Act
+            int number = numberGenerator.Generate();
+            
+
+            //Assert
+            Assert.IsTrue(number > 9);
+
+        }
+
 
     }
 }
