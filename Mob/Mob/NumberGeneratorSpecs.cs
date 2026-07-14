@@ -4,18 +4,26 @@
     public sealed class NumberGeneratorSpecs
     {
         [TestMethod]
-        public void TestMethod()
-        {
-            //Arrange (Pre-Conditions)
+        public void EvenNumber()
+        {          
             var numberGenerator = new NumberGenerator();
-
-            //Act (Steps)
+                 
             int number = numberGenerator.Generate();
-
-            //Assert (Post-Conditions)
+                    
             Assert.IsTrue(number %  2 == 0);
         }
 
+        [TestMethod]
+        public void EndsInTwo()
+        {
+            //Arrange 
+            var numberGenerator = new NumberGenerator();
 
+            //Act 
+            int number = numberGenerator.Generate();
+
+            //Assert 
+            Assert.IsTrue(number.ToString().EndsWith("2"));
+        }
     }
 }
