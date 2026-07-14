@@ -5,12 +5,12 @@
     {
         [TestMethod]
         public void EvenNumber()
-        {          
+        {
             var numberGenerator = new NumberGenerator();
-                 
+
             int number = numberGenerator.Generate();
-                    
-            Assert.IsTrue(number %  2 == 0);
+
+            Assert.IsTrue(number % 2 == 0);
         }
 
         [TestMethod]

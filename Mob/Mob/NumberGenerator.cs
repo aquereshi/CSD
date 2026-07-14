@@ -4,7 +4,7 @@
     {
         public int Generate()
         {
-            return 51;
+            return 42;
         }
     }
 }
