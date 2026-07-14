@@ -51,5 +51,20 @@
             //Assert 
             Assert.IsTrue(number < 100);
         }
+
+        [TestMethod]
+        public void SumOfBothDigitsEquals6()
+        {
+            //Arrange 
+            var numberGenerator = new NumberGenerator();
+
+            //Act 
+            int number = numberGenerator.Generate();
+            int firstDigit = number/10 ;
+            int secondDigit = number % 10;
+
+            //Assert 
+            Assert.IsTrue(firstDigit + secondDigit == 6);
+        }
     }
 }
