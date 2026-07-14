@@ -6,14 +6,14 @@
         [TestMethod]
         public void TestMethod()
         {
-            //Arrange
-   
+            //Arrange (Pre-Conditions)
+            var numberGenerator = new NumberGenerator();
 
-            //Act
-         
+            //Act (Steps)
+            int number = numberGenerator.Generate();
 
-            //Assert
-                   
+            //Assert (Post-Conditions)
+            Assert.IsTrue(number %  2 == 0);
         }
 
 
