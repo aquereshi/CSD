@@ -38,5 +38,18 @@
             //Assert 
             Assert.IsTrue(number > 9);
         }
+
+        [TestMethod]
+        public void Lessthan100()
+        {
+            //Arrange 
+            var numberGenerator = new NumberGenerator();
+
+            //Act 
+            int number = numberGenerator.Generate();
+
+            //Assert 
+            Assert.IsTrue(number < 100);
+        }
     }
 }
