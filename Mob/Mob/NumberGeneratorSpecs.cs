@@ -25,5 +25,18 @@
             //Assert 
             Assert.IsTrue(number.ToString().EndsWith("2"));
         }
+
+        [TestMethod]
+        public void GreaterThan9()
+        {
+            //Arrange 
+            var numberGenerator = new NumberGenerator();
+
+            //Act 
+            int number = numberGenerator.Generate();
+
+            //Assert 
+            Assert.IsTrue(number > 9);
+        }
     }
 }

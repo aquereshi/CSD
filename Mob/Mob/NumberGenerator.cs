@@ -2,13 +2,9 @@
 {
     public class NumberGenerator
     {
-        public NumberGenerator()
-        {
-        }
-
         public int Generate()
         {
-            return 2;
+            return 12;
         }
     }
 }
